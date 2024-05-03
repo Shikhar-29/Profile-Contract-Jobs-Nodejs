@@ -1,0 +1,13 @@
+curl -X GET http://localhost:3001/contracts/1 -H "profile_id: valid-profile-id"
+
+curl -X GET http://localhost:3001/contracts -H "profile_id: valid-profile-id"
+
+curl -X POST http://localhost:3001/jobs/unpaid -H "profile_id: valid-client-profile-id"
+
+curl -X POST http://localhost:3001/jobs/1/pay -H "profile_id: valid-client-profile-id"
+
+curl -X POST http://localhost:3001/balances/deposit/1 -H "profile_id: valid-client-profile-id" -H "Content-Type: application/json" -d '{"amount": 100}'
+
+curl -X GET http://localhost:3001/admin/best-profession?start=2023-01-01&end=2023-12-31
+
+curl -X GET http://localhost:3001/admin/best-clients?start=2023-01-01&end=2023-12-31
